@@ -10,8 +10,10 @@ This repository contains various LeetCode problems that I have solved, categoriz
 I am updating this repository daily with new LeetCode problems that I am working on. This is to ensure that the repository remains relevant and serves as an accurate reflection of my learning journey.
 
 # How to Use 🤔
-If you are also a beginner in LeetCode, this repository can serve as a great example of how to approach these problems. You can use the solutions provided as a reference and study the thought process behind each approach.
+If you're new to LeetCode, this collection of solutions can be a helpful guide for tackling problems. You can use the solutions provided as a reference and learn from the different approaches taken. These solutions are available both in repositories and on the website https://redditarun.github.io/LeetCode/.
 
-Feel free to clone this repository and use it as a reference for your own LeetCode journey. You can also reach out to me if you have any questions or suggestions for improvement.
+You're welcome to make a copy of this collection and use it as a resource for your own LeetCode progress. If you have any queries or feedback on how to enhance this resource, please don't hesitate to contact me.
+
+### Note: Please be advised that the solutions available on the website will be revised every week, and they come with explanations as well.
 
 Happy learning! 🚀

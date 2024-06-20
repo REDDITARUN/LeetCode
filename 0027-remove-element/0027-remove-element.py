@@ -6,13 +6,14 @@ class Solution(object):
         :rtype: int
         """
         
-        pointer = 0
+#         pointer = 0
         
-        for i in range(len(nums)):
-            if nums[i] != val:
-                nums[pointer] = nums[i]
-                pointer += 1
+#         for i in range(len(nums)):
+#             if nums[i] != val:
+#                 nums[pointer] = nums[i]
+#                 pointer += 1
         
-        return pointer
-      
+#         return pointer
+        nums[:] = [num for num in nums if num != val]
+        return len(nums)
         

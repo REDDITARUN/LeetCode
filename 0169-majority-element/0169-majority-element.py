@@ -6,19 +6,29 @@ class Solution(object):
         """
         
         
-
-            
-            
-        candidate = None
-        count = 0
+        store = {}
+        count = len(nums)/2
         
-        for num in nums:
-            if count == 0:
-                candidate = num
-                count = 1
-            elif num == candidate:
-                count += 1
+        for ele in nums:
+            if ele in store:
+                store[ele] += 1
             else:
-                count -= 1
+                store[ele]= 1
         
-        return candidate
+            if store[ele] > count:
+                return ele
+            
+            
+#         candidate = None
+#         count = 0
+        
+#         for num in nums:
+#             if count == 0:
+#                 candidate = num
+#                 count = 1
+#             elif num == candidate:
+#                 count += 1
+#             else:
+#                 count -= 1
+        
+#         return candidate

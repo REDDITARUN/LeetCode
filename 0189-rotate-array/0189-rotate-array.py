@@ -8,7 +8,7 @@ class Solution(object):
         
         n = len(nums)
         k = k % n  # Effective rotations
-        print(k)
+        # print(k)
         
         def reverse(start, end):
             while start < end:
@@ -18,13 +18,13 @@ class Solution(object):
         
         # Step 1: Reverse the entire array
         reverse(0, n - 1)
-        print(nums)
+        # print(nums)
         
         # Step 2: Reverse the first k elements
         reverse(0, k - 1)
-        print(nums)
+        # print(nums)
         
         # Step 3: Reverse the remaining elements
         reverse(k, n - 1)
-        print(nums)
+        # print(nums)
         

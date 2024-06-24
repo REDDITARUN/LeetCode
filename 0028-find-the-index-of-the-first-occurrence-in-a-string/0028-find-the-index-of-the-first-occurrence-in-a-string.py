@@ -6,8 +6,13 @@ class Solution(object):
         :rtype: int
         """
         
-        return haystack.find(needle)
-#         str = needle.split()
-#         str2 = haystack.split()
+        # return haystack.find(needle)  # using the find function
+    
+        if not needle:
+            return 0
         
-#         for
+        for i in range(len(haystack) - len(needle) + 1):
+            if haystack[i:i+len(needle)] == needle:
+                return i
+        
+        return -1

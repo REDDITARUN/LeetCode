@@ -9,33 +9,33 @@ class Solution(object):
             return ""
         
         
-#         prefix = strs[0]
+        prefix = strs[0]
         
         
-#         for s in strs[1:]:
+        for s in strs[1:]:
             
-#             while not s.startswith(prefix):
-#                 prefix = prefix[:-1]
+            while not s.startswith(prefix):
+                prefix = prefix[:-1]
                 
-#                 if not prefix:
-#                     return ""
+                if not prefix:
+                    return ""
             
-#         return prefix
+        return prefix
 
-        min_len = min(len(s) for s in strs)
+#         min_len = min(len(s) for s in strs)
 
         
-        prefix = ""
+#         prefix = ""
 
        
-        for i in range(min_len):
+#         for i in range(min_len):
         
-            current_char = strs[0][i]
-            if all(s[i] == current_char for s in strs):
-                prefix += current_char
-            else:
-                break
+#             current_char = strs[0][i]
+#             if all(s[i] == current_char for s in strs):
+#                 prefix += current_char
+#             else:
+#                 break
 
-        return prefix
+#         return prefix
         
         

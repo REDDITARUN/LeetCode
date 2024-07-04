@@ -13,4 +13,3 @@ class Solution(object):
         new_string = " ".join(words)
         
         return new_string
-            

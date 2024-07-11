@@ -1,9 +1,5 @@
 class Solution:
     def isValidSudoku(self, board):
-        """
-        :type board: List[List[str]]
-        :rtype: bool
-        """
         # Create sets to keep track of seen numbers
         rows = [set() for _ in range(9)]
         columns = [set() for _ in range(9)]

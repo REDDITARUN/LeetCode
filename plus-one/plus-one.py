@@ -12,8 +12,11 @@ class Solution(object):
         
         res_str = str(res)
         
-        digits = None
-        digits = [int(digit) for digit in res_str]
+        digits = []
+        for digit in res_str:
+            
+            digits.append(int(digit)) # Convert the character to an integer and append it to the list
+                                                        # digits = [int(digit) for digit in res_str]
         
         return digits
                     

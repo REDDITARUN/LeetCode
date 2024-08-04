@@ -4,20 +4,16 @@ class Solution(object):
         :type digits: List[int]
         :rtype: List[int]
         """
+        n = len(digits)
         
-        num_str = ''.join(map(str, digits))
-        num = int(num_str)
+        # Traverse the list from the end to the beginning
+        for i in range(n - 1, -1, -1):
+            # If the current digit is less than 9, just add one and return
+            if digits[i] < 9:
+                digits[i] += 1
+                return digits
+            # If the digit is 9, it becomes 0 and we carry over to the next digit
+            digits[i] = 0
         
-        res = num+1
-        
-        res_str = str(res)
-        
-        digits = []
-        for digit in res_str:
-            
-            digits.append(int(digit)) # Convert the character to an integer and append it to the list
-                                                        # digits = [int(digit) for digit in res_str]
-        
-        return digits
-                    
-        
+        # If we have traversed the whole list and all digits were 9
+        return [1] + digits

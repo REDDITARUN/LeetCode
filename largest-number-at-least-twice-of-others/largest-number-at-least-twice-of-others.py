@@ -4,24 +4,22 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        
-        first_largest = 0
-        second_largest = 0
-        n = len(nums)
-        
-        
-        for i in range(n):
-            if nums[i] > 0 and nums[i] > first_largest:
+        if len(nums) == 1:
+            return 0
+
+        first_largest = -1
+        second_largest = -1
+        largest_index = -1
+
+        for i in range(len(nums)):
+            if nums[i] > first_largest:
+                second_largest = first_largest
                 first_largest = nums[i]
-                temp = i
-            for j in range(n):    
-                if nums[j] > 0 and nums[j] < first_largest and nums[j] > second_largest:
-                    second_largest = nums[j]
-                    
-        if first_largest >= 2*second_largest:
-            return temp
+                largest_index = i
+            elif nums[i] > second_largest:
+                second_largest = nums[i]
+
+        if first_largest >= 2 * second_largest:
+            return largest_index
         else:
             return -1
-            
-
-        

@@ -15,7 +15,7 @@ class Solution:
 
         return missing_numbers
 
-        [-4,-2,2,-1]
+        # [-4,-2,2,-1]
         
         
 #         seen = set(nums)

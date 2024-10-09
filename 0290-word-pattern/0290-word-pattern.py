@@ -7,20 +7,15 @@ class Solution:
             return False
         
         dic = {}  # To map pattern characters to words
-        reverse_map = {}  # To map words to pattern characters
+        mapped_words = set()  # To track already mapped words
         
-        for i in range(len(pattern)):
-            p_char = pattern[i]
-            word = ss[i]
-            
-            # Check if pattern[i] is not mapped yet
+        for p_char, word in zip(pattern, ss):
             if p_char not in dic:
-                # Check if the word is already mapped to a different pattern character
-                if word in reverse_map and reverse_map[word] != p_char:
+                # Ensure no other character has already mapped to this word
+                if word in mapped_words:
                     return False
                 dic[p_char] = word
-                reverse_map[word] = p_char
-            # If pattern[i] is mapped, check if it's mapped to the correct word
+                mapped_words.add(word)
             elif dic[p_char] != word:
                 return False
         

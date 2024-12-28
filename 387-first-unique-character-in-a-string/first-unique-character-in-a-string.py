@@ -1,16 +1,19 @@
-class Solution:
-    def firstUniqChar(self, s: str) -> int:
-
+class Solution(object):
+    def firstUniqChar(self, s):
         dic = {}
 
         for char in s:
-
             if char in dic:
                 dic[char] += 1
             else:
                 dic[char] = 1
-        for i , char in enumerate(s):
+        
+        for i, char in enumerate(s):
             if dic[char] == 1:
                 return i
-        
+
         return -1
+
+
+
+        

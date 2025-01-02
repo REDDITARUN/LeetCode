@@ -20,7 +20,6 @@ class Solution(object):
             node.left = tobst(left, mid-1)
             node.right = tobst(mid+1,right)
 
-            return node
-            
+            return node     
         return tobst(0, len(nums)-1)
         

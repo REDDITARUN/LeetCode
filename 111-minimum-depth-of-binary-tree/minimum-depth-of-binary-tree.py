@@ -15,14 +15,9 @@ class Solution(object):
         if not root.left and not root.right:
             return 1
         
-        left_depth = float('inf')
-        right_depth = float('inf')
-        
-        if root.left:
-            left_depth = self.minDepth(root.left)
 
-        # Calculate right depth only if right child exists
-        if root.right:
-            right_depth = self.minDepth(root.right)
+        # If one of the children is None, don't consider it (infinity ensures it won't be chosen)
+        left_depth = self.minDepth(root.left) if root.left else float('inf')
+        right_depth = self.minDepth(root.right) if root.right else float('inf')
 
         return min(left_depth, right_depth) + 1

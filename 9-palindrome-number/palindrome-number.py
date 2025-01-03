@@ -7,17 +7,21 @@ class Solution(object):
 
         if x < 0:
             return False
-        if 0 <= x <= 9 :
-            return True
+        # if 0 <= x <= 9 :
+        #     return True
 
-        original = x
-        reversed = 0
+        # original = x
+        # reversed = 0
         
-        while x > 0:
-            digit = x % 10
-            reversed = reversed * 10 + digit
-            x = x // 10
+        # while x > 0:
+        #     digit = x % 10
+        #     reversed = reversed * 10 + digit
+        #     x = x // 10
 
-        return original == reversed
+        # return original == reversed
+
+        strx = str(x)
+        return strx == strx[::-1]
+
 
         

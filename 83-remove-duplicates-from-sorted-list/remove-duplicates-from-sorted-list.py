@@ -1,12 +1,14 @@
 
 class Solution(object):
     def deleteDuplicates(self, head):
-        curr = head
-        while curr and curr.next:
-            if curr.val == curr.next.val:
-                curr.next = curr.next.next
+        current_node = head
+
+        while current_node and current_node.next:
+            if current_node.val == current_node.next.val:
+                current_node.next = current_node.next.next
             else:
-                curr = curr.next
+                current_node = current_node.next
+            
         
         return head
 

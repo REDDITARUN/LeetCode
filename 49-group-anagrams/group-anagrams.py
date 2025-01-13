@@ -4,16 +4,15 @@ class Solution(object):
         :type strs: List[str]
         :rtype: List[List[str]]
         """
-        get_dict = {}
-
+        stored = {}
         for word in strs:
             sorted_word = "".join(sorted(word))
-            if sorted_word not in get_dict:
-                get_dict[sorted_word] = []
 
-            get_dict[sorted_word].append(word)
+            if sorted_word not in stored:
+                stored[sorted_word] = []
+            stored[sorted_word].append(word)
 
-        return list(get_dict.values())
+        return list(stored.values())
 
 
         
